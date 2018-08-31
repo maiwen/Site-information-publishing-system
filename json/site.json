@@ -1,0 +1,36 @@
+{
+  "GlueSiteUniqueID": {
+      "type": "string"
+    },
+    "GlueSiteName": {
+      "type": "string"
+    },
+    "GlueSiteDescription": {
+      "type": "string"
+    },
+    "GlueSiteSecurityContact": {
+      "type": "string"
+    },
+  "GlueSiteSysAdminContact": {
+      "type": "string"
+    },
+    "GlueSiteLongitude": {
+      "type": "number"
+    },
+  "GlueSiteLatitude": {
+      "type": "number"
+    },
+    "GlueSiteLocation": {
+      "type": "string",
+      "description": "Name of town/city"
+    },
+    "WLCG_NAME": {
+      "type": "string"
+    },
+  "WLCG_PARENT": {
+      "type": "string"
+    },
+    "WLCG_TIER": {
+      "type": "integer"
+    }
+}

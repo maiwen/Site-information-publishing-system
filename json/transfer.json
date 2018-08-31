@@ -1,0 +1,22 @@
+{
+    "TransferService": [
+    {
+    "Source": {
+      "type": "string",
+      "description": "The source site of the transfer"
+    },
+    "Destination ": {
+      "type": "string",
+      "description": "The destination site of the transfer"
+    },
+    "Amount": {
+      "type": "integer",
+      "description": "The amount of transfer data (GB)"
+    },
+    "Speed": {
+      "type": "integer",
+      "description": "The speed of transfer (GB/S)"
+    }
+  }
+  ]
+}

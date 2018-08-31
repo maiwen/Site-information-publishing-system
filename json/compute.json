@@ -1,0 +1,310 @@
+{
+  "ComputingManager": [
+    {
+    "Reservation": {
+      "type": ["boolean","null"],
+      "description": "Whether advance reservation is supported (no value implies undefined in ExtendedBoolean_t)"
+    },
+    "BulkSubmission": {
+      "type": ["boolean","null"],
+      "description": "Whether multiple jobs can be submitted at once (no value implies undefined in ExtendedBoolean_t)"
+    },
+    "TotalPhysicalCPUs": {
+      "type": "integer",
+      "description": "The total number of physical CPUs managed by this ComputingManager"
+    },
+    "TotalLogicalCPUs": {
+      "type": "integer",
+      "description": "The total number of logical CPUs managed by this ComputingManager"
+    },
+    "TotalSlots": {
+      "type": "integer",
+      "description": "The total number of slots managed by this ComputingManager"
+    },
+    "SlotsUsedByLocalJobs": {
+      "type": "integer",
+      "description": "The number of slots currently used by jobs submitted via a non-Grid interface"
+    },
+    "SlotsUsedByGridJobs": {
+      "type": "integer",
+      "description": "The number of slots currently used by jobs submitted via a non-Grid interface"
+    },
+    "Homogeneous": {
+      "type": ["boolean","null"],
+      "description": "Whether this ComputingManager manages only one type of ExecutionEnvironment"
+    },
+    "NetworkInfo": {
+      "type": "array",
+      "description": "The types of internal network connections between ExecutionEnvironments (NetworkInfo_t)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "LocalCPUDistribution": {
+      "type": ["boolean","null"],
+      "description": "Classification of the managed ExecutionEnvironments aggregated by the number of logical CPUs"
+    },
+    "WorkingAreaShared": {
+      "type": ["boolean","null"],
+      "description": "True if the working area is shared across different ExecutionEnvironments"
+    },
+    "WorkingAreaGuaranteed": {
+      "type": ["boolean","null"],
+      "description": "True if the job is guaranteed all of WorkingAreaTotal"
+    },
+    "WorkingAreaTotal": {
+      "type": "integer",
+      "description": "Total size of the working area available to single slot jobs (GB)"
+    },
+    "WorkingAreaFree": {
+      "type": "integer",
+      "description": "The amount of free space in the working area (GB)"
+    },
+    "WorkingAreaLifeTime": {
+      "type": "integer",
+      "description": "The minimum guaranteed lifetime of files created in the working area (seconds)"
+    },
+    "WorkingAreaMultiSlotTotal": {
+      "type": "integer",
+      "description": "The total size of the working area across all ExecutionEnvironments (GB)"
+    },
+    "WorkingAreaMultiSlotFree": {
+      "type": "integer",
+      "description": "The available space in the working area across all ExecutionEnvironments (GB)"
+    },
+    "WorkingAreaMultiSlotLifeTime": {
+      "type": "integer",
+      "description": "The minimum guaranteed lifetime of files created in the working area (seconds)"
+    },
+    "CacheTotal": {
+      "type": "integer",
+      "description": "If local caching of input files is supported, the total size of the area they may be stored in"
+    },
+    "CacheFree": {
+      "type": "integer",
+      "description": "If local caching of input files is supported, the available size of the area they may be stored in"
+    },
+    "TmpDir": {
+      "type": "string",
+      "description": "The absolute path of a temporary directory local to an ExecutionEnvironment"
+    },
+    "ScratchDir": {
+      "type": "string",
+      "description": "The absolute path of a shared directory available for application data"
+    },
+    "ApplicationDir": {
+      "type": "string",
+      "description": "The absolute path of a directory available for installation of persistent application software"
+    },
+    "Associations": {
+      "type": "object",
+      "properties": {
+        "ApplicationEnvironmentID": {
+          "type": "array",
+          "description": "ID(s) of ApplicationEnvironments provided by this ComputingManager",
+          "items": {
+            "type": "string"
+          }
+        },
+        "BenchmarkID": {
+          "type": "array",
+          "description": "ID(s) of Benchmarks associated with this ComputingManager",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  ], 
+  "ComputingService": [
+    {
+    "TotalJobs": {
+      "type": "integer",
+      "description": "The total number of Grid jobs known to the system"
+    },
+    "RunningJobs": {
+      "type": "integer",
+      "description": "The number of Grid jobs which are running in an ExecutionEnvironment"
+    },
+    "WaitingJobs": {
+      "type": "integer",
+      "description": "The number of Grid jobs which are waiting to start executing"
+    },
+    "StagingJobs": {
+      "type": "integer",
+      "description": "The number of Grid jobs staging files before or after execution"
+    },
+    "SuspendedJobs": {
+      "type": "integer",
+      "description": "The number of Grid jobs that started to execute, but are now suspended"
+    },
+    "PreLRMSWaitingJobs": {
+      "type": "integer",
+      "description": "The number of Grid jobs managed by the Grid software, but not yet passed to the LRMS"
+    }
+  }
+  ],
+  "ExecutionEnvironment": [
+    {
+    "Platform": {
+      "type": "string",
+      "description": "The platform architecture - Platform_t (open enumeration)"
+    },
+    "VirtualMachine": {
+      "type": ["boolean","null"],
+      "description": "True if the ExecutionEnvironment is a virtual machine"
+    },
+    "TotalInstances": {
+      "type": "integer",
+      "description": "The total number of ExecutionEnvironment instances"
+    },
+    "UsedInstances": {
+      "type": "integer",
+      "description": "The number of ExecutionEnvironment instances in use"
+    },
+    "UnavailableInstances": {
+      "type": "integer",
+      "description": "The number of ExecutionEnvironment instances that are unavailable"
+    },
+    "PhysicalCPUs": {
+      "type": "integer",
+      "description": "The number of physical CPUs in one ExecutionEnvironment instance"
+    },
+    "LogicalCPUs": {
+      "type": "integer",
+      "description": "The number of logical CPUs in one ExecutionEnvironment instance"
+    },
+    "CPUMultiplicity": {
+      "type": "string",
+      "description": "Information about the CPUs and cores in an execution environment",
+      "enum": ["multicpu-multicore","multicpu-singlecore","singlecpu-multicore","singlecpu-singlecore"]
+    },
+    "CPUVendor": {
+      "type": "string",
+      "description": "The name of the manufacturer of the CPU"
+    },
+    "CPUModel": {
+      "type": "string",
+      "description": "The model of the CPU, as defined by the vendor"
+    },
+    "CPUVersion": {
+      "type": "string",
+      "description": "The specific version name of the CPU, as defined by the vendor"
+    },
+    "CPUClockSpeed": {
+      "type": "integer",
+      "description": "The clock speed of the CPU (MHz)"
+    },
+    "CPUTimeScalingFactor": {
+      "type": "float",
+      "description": "The factor used by the ComputingManager to scale the CPU time limit"
+    },
+    "WallTimeScalingFactor": {
+      "type": "float",
+      "description": "The factor used by the ComputingManager to scale the wallclock time limit"
+    },
+    "MainMemorySize": {
+      "type": "integer",
+      "description": "The total amount of physical RAM in one ExecutionEnvironment instance (MB)"
+    },
+    "VirtualMemorySize": {
+      "type": "integer",
+      "description": "The total amount of virtual memory (RAM+swap) in one ExecutionEnvironment instance (MB)"
+    },
+    "OSFamily": {
+      "type": "string",
+      "description": "The general family of the operating system - OSFamily_t (open enumeration)"
+    },
+    "OSName": {
+      "type": "string",
+      "description": "The specific name of the operating system - OSName_t (open enumeration)"
+    },
+    "OSVersion": {
+      "type": "string",
+      "description": "The version of the operating system, as defined by the vendor"
+    },
+    "ConnectivityIn": {
+      "type": ["boolean","null"],
+      "description": "True if direct inbound network connectiity is available to a running job"
+    },
+    "ConnectivityOut": {
+      "type": ["boolean","null"],
+      "description": "True if direct outbound network connectiity is available to a running job"
+    },
+    "NetworkInfo": {
+      "type": "array",
+      "description": "The types of internal network connections between ExecutionEnvironments - NetworkInfo_t (open enumeration)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Associations": {
+      "type": "object",
+      "properties": {
+        "ApplicationEnvironmentID": {
+          "type": "array",
+          "description": "ID(s) of ApplicationEnvironments available in this ExecutionEnvironment",
+          "items": {
+            "type": "string"
+          }
+        },
+        "BenchmarkID": {
+          "type": "array",
+          "description": "ID(s) of Benchmarks associated with this ExecutionEnvironment",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  ], 
+  "Location": [
+    {
+    "Address": {
+      "type": "string",
+      "description": "A free format street address"
+    },
+    "Place": {
+      "type": "string",
+      "description": "Name of town/city"
+    },
+    "Country": {
+      "type": "string",
+      "description": "Name of country"
+    },
+    "PostalCode": {
+      "type": "string",
+      "description": "Postal code"
+    },
+    "Latitude": {
+      "type": "number",
+      "description": "Position north (positive) or south (negative) of the equator in degrees"
+    },
+    "Longitude": {
+      "type": "number",
+      "description": "Position east (positive) or west (negative) of the primary meridian in degrees"
+    },
+    "Associations": {
+      "type": "object",
+      "properties": {
+	"ServiceID": {
+	  "type": "array",
+	  "description": "The IDs of Services at this location",
+	  "items": {
+	    "type": "string"
+	  }
+	},
+	"DomainID": {
+	  "type": "array",
+	  "description": "The IDs of Domains at this location",
+	  "items": {
+	    "type": "string"
+	  }
+	}
+      }
+    }
+  }
+  ]
+}

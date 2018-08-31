@@ -1,0 +1,139 @@
+{
+  "StorageAccessProtocol": [
+    {
+    "Type": {
+      "type": "string",
+      "description": "The type of the protocol - StorageAccessProtocol_t"
+    },
+    "Version": {
+      "type": "string",
+      "description": "The version of the protocol supported"
+    },
+    "MaxStreams": {
+      "type": "integer",
+      "description": "The maximum number of parallel network streams which can be usef for a single transfer"
+    },
+    "Associations": {
+      "type": "object",
+      "properties": {
+	"StorageServiceID": {
+	  "type": "string",
+	  "description": "The ID of the StorageService this protocol is available for"
+	},
+	"ToComputingServiceID": {
+	  "type": "array",
+	  "description": "The ID(s) ToComputingService objects that describe connectivity to ComputingServices",
+	  "items": {
+	    "type": "string"
+	  }
+	}
+      },
+      "required": ["StorageServiceID"]
+    }
+  }
+  ],
+  "StorageService": [
+    {
+    "Associations": {
+      "type": "object",
+      "properties": {
+	"StorageAccessProtocolID": {
+	  "type": "array",
+	  "description": "The ID(s) of the StorageAccessProtocols supported by this service",
+	  "items": {
+            "type": "string"
+	  }
+	},
+	"StorageServiceCapacityID": {
+	  "type": "array",
+	  "description": "The ID(s) of the StorageServiceCapacities for this Service",
+	  "items": {
+            "type": "string"
+	  }
+	}
+      }
+    },
+    "StorageServiceCapacity":{
+    "Type": {
+      "type": "string",
+      "description": "The type of storage capacity - StorageCapacity_t"
+    },
+    "TotalSize": {
+      "type": "integer",
+      "description": "The total amount of storage of this type (GB)"
+    },
+    "FreeSize": {
+      "type": "integer",
+      "description": "The amount of currently available storage of this type (GB)"
+    },
+    "UsedSize": {
+      "type": "integer",
+      "description": "The amount storage of this type in use (GB)"
+    },
+    "ReservedSize": {
+      "type": "integer",
+      "description": "The amount storage of this type which is not in use, but has been reserved for use in use (GB)"
+    },
+    "Associations": {
+      "type": "object",
+      "properties": {
+	"StorageServiceID": {
+	  "type": "string",
+	  "description": "The ID of the StorageService this capacity describes"
+	}
+      },
+      "required": ["StorageServiceID"]
+    }
+  }
+
+  }
+  ],
+  "Location": [
+    {
+    "Address": {
+      "type": "string",
+      "description": "A free format street address"
+    },
+    "Place": {
+      "type": "string",
+      "description": "Name of town/city"
+    },
+    "Country": {
+      "type": "string",
+      "description": "Name of country"
+    },
+    "PostalCode": {
+      "type": "string",
+      "description": "Postal code"
+    },
+    "Latitude": {
+      "type": "number",
+      "description": "Position north (positive) or south (negative) of the equator in degrees"
+    },
+    "Longitude": {
+      "type": "number",
+      "description": "Position east (positive) or west (negative) of the primary meridian in degrees"
+    },
+    "Associations": {
+      "type": "object",
+      "properties": {
+	"ServiceID": {
+	  "type": "array",
+	  "description": "The IDs of Services at this location",
+	  "items": {
+	    "type": "string"
+	  }
+	},
+	"DomainID": {
+	  "type": "array",
+	  "description": "The IDs of Domains at this location",
+	  "items": {
+	    "type": "string"
+	  }
+	}
+      }
+    }
+  }
+  ]
+
+}

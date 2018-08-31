@@ -1,0 +1,348 @@
+{
+  "ComputingManager": [
+    {
+      "Associations": {
+        "ResourceID": [
+          "urn:glue2:ExecutionEnvironment:NodeType1.stampede.tacc.xsede.org", 
+          "urn:glue2:ExecutionEnvironment:NodeType2.stampede.tacc.xsede.org"
+        ], 
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:05Z", 
+      "Homogeneous": false, 
+      "ID": "urn:glue2:ComputingManager:stampede.tacc.xsede.org", 
+      "Name": "SLURM", 
+      "ProductName": "SLURM", 
+      "Reservation": true, 
+      "SlotsUsedByLocalJobs": 92784, 
+      "TotalLogicalCPUs": 103040, 
+      "TotalPhysicalCPUs": 12880, 
+      "TotalSlots": 103040
+    }
+  ], 
+  "ComputingService": [
+    {
+      "Associations": {
+        "ContactID": [],
+        "LocationID": "urn:glue2:Location:TexasAdvancedComputingCenter", 
+        "ServiceID": []
+      }, 
+      "Capability": [
+        "executionmanagement.jobexecution", 
+        "executionmanagement.jobdescription", 
+        "executionmanagement.jobmanager", 
+        "executionmanagement.executionandplanning", 
+        "executionmanagement.reservation"
+      ], 
+      "CreationTime": "2013-05-05T22:24:06Z", 
+      "ID": "urn:glue2:ComputingService:stampede.tacc.xsede.org", 
+      "Name": "SLURM", 
+      "PreLRMSWaitingJobs": 0, 
+      "QualityLevel": "production", 
+      "RunningJobs": 403, 
+      "StagingJobs": 0, 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 552, 
+      "Type": "ipf.SLURM", 
+      "WaitingJobs": 149
+    }
+  ], 
+  "ComputingShare": [
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:development.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 14, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "development", 
+      "MaxSlotsPerJob": 152, 
+      "MaxWallTime": 28800, 
+      "Name": "development", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 14, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 14, 
+      "UsedSlots": 400, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:serial.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 36, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "serial", 
+      "MaxSlotsPerJob": 1, 
+      "MaxWallTime": 86400, 
+      "Name": "serial", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 36, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 36, 
+      "UsedSlots": 576, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:gpudev.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 0, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "gpudev", 
+      "MaxSlotsPerJob": 8, 
+      "MaxWallTime": 28800, 
+      "Name": "gpudev", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 0, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 0, 
+      "UsedSlots": 0, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:visdev.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 0, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "visdev", 
+      "MaxSlotsPerJob": 8, 
+      "MaxWallTime": 28800, 
+      "Name": "visdev", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 0, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 0, 
+      "UsedSlots": 0, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:gpu.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 44, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 2, 
+      "MappingQueue": "gpu", 
+      "MaxSlotsPerJob": 120, 
+      "MaxWallTime": 86400, 
+      "Name": "gpu", 
+      "RequestedSlots": 352, 
+      "RunningJobs": 44, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 46, 
+      "UsedSlots": 1824, 
+      "WaitingJobs": 2
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:vis.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 0, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "vis", 
+      "MaxSlotsPerJob": 120, 
+      "MaxWallTime": 86400, 
+      "Name": "vis", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 0, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 0, 
+      "UsedSlots": 0, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:largemem.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 0, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "largemem", 
+      "MaxSlotsPerJob": 16, 
+      "MaxWallTime": 259200, 
+      "Name": "largemem", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 0, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 0, 
+      "UsedSlots": 0, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:normal-mic.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 3, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "normal-mic", 
+      "MaxSlotsPerJob": 6400, 
+      "MaxWallTime": 172800, 
+      "Name": "normal-mic", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 3, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 3, 
+      "UsedSlots": 48, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:normal.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 303, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 32, 
+      "MappingQueue": "normal", 
+      "MaxSlotsPerJob": 1024, 
+      "MaxWallTime": 172800, 
+      "Name": "normal", 
+      "RequestedSlots": 25600, 
+      "RunningJobs": 303, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 335, 
+      "UsedSlots": 55024, 
+      "WaitingJobs": 32
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:request.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 0, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "request", 
+      "MaxSlotsPerJob": 6400, 
+      "MaxWallTime": 345600, 
+      "Name": "request", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 0, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 0, 
+      "UsedSlots": 0, 
+      "WaitingJobs": 0
+    }, 
+    {
+      "Associations": {
+        "ResourceID": [],
+        "ServiceID": "urn:glue2:ComputingService:stampede.tacc.xsede.org"
+      }, 
+      "CreationTime": "2013-05-05T22:24:04Z", 
+      "ID": "urn:glue2:ComputingShare:large.stampede.tacc.xsede.org", 
+      "LocalRunningJobs": 1, 
+      "LocalSuspendedJobs": 0, 
+      "LocalWaitingJobs": 0, 
+      "MappingQueue": "large", 
+      "MaxSlotsPerJob": 6400, 
+      "MaxWallTime": 172800, 
+      "Name": "large", 
+      "RequestedSlots": 0, 
+      "RunningJobs": 1, 
+      "ServingState": "production", 
+      "SuspendedJobs": 0, 
+      "TotalJobs": 1, 
+      "UsedSlots": 640, 
+      "WaitingJobs": 0
+    }
+  ], 
+  "ExecutionEnvironment": [
+    {
+      "Associations": {
+        "ManagerID": "urn:glue2:ComputingManager:stampede.tacc.xsede.org"
+      }, 
+      "ConnectivityIn": true, 
+      "ConnectivityOut": true, 
+      "CreationTime": "2013-05-05T22:24:03Z", 
+      "ID": "urn:glue2:ExecutionEnvironment:NodeType1.stampede.tacc.xsede.org", 
+      "LogicalCPUs": 16, 
+      "MainMemorySize": 0, 
+      "Name": "NodeType1", 
+      "OSFamily": "linux", 
+      "OSName": "linux", 
+      "OSVersion": "2.6.32-279.14.1.el6.x86_64", 
+      "PhysicalCPUs": 2, 
+      "Platform": "x86_64", 
+      "TotalInstances": 6408, 
+      "UnavailableInstances": 101, 
+      "UsedInstances": 5799
+    }, 
+    {
+      "Associations": {
+        "ManagerID": "urn:glue2:ComputingManager:stampede.tacc.xsede.org"
+      }, 
+      "ConnectivityIn": true, 
+      "ConnectivityOut": true, 
+      "CreationTime": "2013-05-05T22:24:03Z", 
+      "ID": "urn:glue2:ExecutionEnvironment:NodeType2.stampede.tacc.xsede.org", 
+      "LogicalCPUs": 32, 
+      "MainMemorySize": 0, 
+      "Name": "NodeType2", 
+      "OSFamily": "linux", 
+      "OSName": "linux", 
+      "OSVersion": "2.6.32-279.14.1.el6.x86_64", 
+      "PhysicalCPUs": 4, 
+      "Platform": "x86_64", 
+      "TotalInstances": 16, 
+      "UnavailableInstances": 0, 
+      "UsedInstances": 0
+    }
+  ], 
+  "Location": [
+    {
+      "Country": "US", 
+      "CreationTime": "2013-05-05T22:24:03Z", 
+      "ID": "urn:glue2:Location:TexasAdvancedComputingCenter", 
+      "Latitude": 30.390132, 
+      "Longitude": -97.725309, 
+      "Name": "Texas Advanced Computing Center", 
+      "Place": "Austin", 
+      "Validity": 86400
+    }
+  ]
+}
